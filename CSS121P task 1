@@ -1,0 +1,43 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+int main() {
+    double quantity,vat,amtdu,amtcsh,change,price,amtduv,insfufnd;
+    vat = 0.12;
+    price = 5;
+    std::cout << "📍📍📍📍📍📍📍📍📍📍📍📍📍📍📍📍📍 .\n   welcome to the lolipop factory. \n 📍📍📍📍📍📍📍📍📍📍📍📍📍📍📍📍📍. \n\n" ;
+    
+    std::cout << "how many lolipops: "; // Prompt the user
+     std::cin >> quantity;
+    std::cout << "\n 📍📍📍📍📍📍📍📍📍📍📍📍📍📍📍📍📍 "; 
+      
+    
+     amtdu = (price * quantity);
+     amtduv = amtdu + (amtdu * vat); 
+      std::cout << "\n \n the amount due is: " <<amtduv << std::endl;
+    std::cout << "\n 📍📍📍📍📍📍📍📍📍📍📍📍📍📍📍📍📍 "; 
+     std::cout << " \n how much would you like to pay: "; 
+     std::cin >> amtcsh;
+     
+
+ 
+// Calculate change
+    change = amtcsh - amtduv;
+
+    // If payment is insufficient
+    if (change < 0) {
+        insfufnd = -change; // Calculate missing amount
+        std::cout << "\n\n Error: Insufficient funds. Please pay what is due. Missing amount: " << insfufnd << std::endl;
+        std::cout << "Please pay the remaining amount: ";
+        std::cin >> amtcsh;
+
+        change = amtcsh - insfufnd; // Recalculate change after second payment
+    }
+
+
+    // Final output
+    std::cout << "\n 📍📍📍📍📍📍📍📍📍📍📍📍📍📍📍📍📍 ";
+    std::cout << "\n\n Here is the change: " << change << std::endl;
+
+    return 0;
+}
