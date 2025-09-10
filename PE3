@@ -1,0 +1,19 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+int main() {
+    float grade,pass;
+    
+    std::cout << "what is your average grade \n ";
+        std::cin >> grade;
+        
+        if (grade >= 60){
+             std::cout << "you passed";
+             
+         
+        }
+        else{
+           std::cout << "you failure "  ;
+        }
+    return 0;
+}
